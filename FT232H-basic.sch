@@ -3849,9 +3849,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="LED1" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="OSC1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="5X3" value="12Mhz"/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
-<part name="U1" library="NXP_By_element14_Batch_1" deviceset="IP4220CZ6" device=""/>
+<part name="ESD1" library="NXP_By_element14_Batch_1" deviceset="IP4220CZ6" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SIP"/>
-<part name="F1" library="SparkFun-PowerIC" deviceset="PTC" device="0603"/>
+<part name="FUSE1" library="SparkFun-PowerIC" deviceset="PTC" device="0603" value="1206L050YR Littelfuse"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603"/>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP"/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -3902,9 +3902,15 @@ adam@adamfeuer.com</text>
 <instance part="OSC1" gate="G$1" x="99.06" y="66.04"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
-<instance part="U1" gate="A" x="68.58" y="137.16" rot="R180"/>
+<instance part="ESD1" gate="A" x="68.58" y="137.16" smashed="yes" rot="R180">
+<attribute name="NAME" x="73.9394" y="129.6162" size="1.778" layer="95" rot="SR180"/>
+<attribute name="VALUE" x="73.0504" y="154.2796" size="1.778" layer="96" rot="SR180"/>
+</instance>
 <instance part="JP1" gate="G$1" x="233.68" y="144.78" rot="MR0"/>
-<instance part="F1" gate="G$1" x="35.814" y="33.274"/>
+<instance part="FUSE1" gate="G$1" x="35.814" y="33.274" smashed="yes">
+<attribute name="NAME" x="33.274" y="36.322" size="1.778" layer="95"/>
+<attribute name="VALUE" x="14.732" y="28.194" size="1.778" layer="96"/>
+</instance>
 <instance part="L1" gate="G$1" x="58.674" y="33.274" rot="R90"/>
 <instance part="C1" gate="G$1" x="48.26" y="22.86"/>
 <instance part="GND13" gate="1" x="48.26" y="17.78"/>
@@ -4038,7 +4044,7 @@ adam@adamfeuer.com</text>
 <wire x1="33.02" y1="137.16" x2="33.02" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="157.48" x2="88.9" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="157.48" x2="88.9" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="GND"/>
+<pinref part="ESD1" gate="A" pin="GND"/>
 <wire x1="88.9" y1="142.24" x2="86.36" y2="142.24" width="0.1524" layer="91"/>
 <junction x="27.94" y="137.16"/>
 </segment>
@@ -4102,13 +4108,13 @@ adam@adamfeuer.com</text>
 <wire x1="27.94" y1="160.02" x2="27.94" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="160.02" x2="91.44" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="VP"/>
+<pinref part="ESD1" gate="A" pin="VP"/>
 <wire x1="91.44" y1="137.16" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
 <junction x="27.94" y="160.02"/>
 </segment>
 <segment>
 <wire x1="17.526" y1="33.274" x2="30.734" y2="33.274" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="1"/>
+<pinref part="FUSE1" gate="G$1" pin="1"/>
 <label x="17.526" y="33.782" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -4122,7 +4128,7 @@ adam@adamfeuer.com</text>
 <pinref part="USB1" gate="G$1" pin="D+"/>
 <wire x1="25.4" y1="144.78" x2="45.72" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="144.78" x2="45.72" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="I/O_4"/>
+<pinref part="ESD1" gate="A" pin="I/O_4"/>
 <wire x1="45.72" y1="142.24" x2="50.8" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="142.24" x2="45.72" y2="121.92" width="0.1524" layer="91"/>
 <junction x="45.72" y="142.24"/>
@@ -4139,7 +4145,7 @@ adam@adamfeuer.com</text>
 <pinref part="USB1" gate="G$1" pin="D-"/>
 <wire x1="25.4" y1="142.24" x2="40.64" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="142.24" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="I/O_2"/>
+<pinref part="ESD1" gate="A" pin="I/O_2"/>
 <wire x1="40.64" y1="137.16" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="137.16" x2="40.64" y2="121.92" width="0.1524" layer="91"/>
 <junction x="40.64" y="137.16"/>
@@ -4223,6 +4229,8 @@ adam@adamfeuer.com</text>
 <junction x="119.38" y="172.72"/>
 <junction x="119.38" y="152.4"/>
 <junction x="162.56" y="162.56"/>
+<pinref part="IC1" gate="G$1" pin="VPHY"/>
+<wire x1="157.48" y1="121.92" x2="157.48" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXO" class="0">
@@ -4236,7 +4244,6 @@ adam@adamfeuer.com</text>
 <label x="205.74" y="114.3" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="ADBUS0"/>
 <wire x1="200.66" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
-<junction x="200.66" y="114.3"/>
 </segment>
 </net>
 <net name="RXI" class="0">
@@ -4327,7 +4334,7 @@ adam@adamfeuer.com</text>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="F1" gate="G$1" pin="2"/>
+<pinref part="FUSE1" gate="G$1" pin="2"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="51.054" y1="33.274" x2="48.26" y2="33.274" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
