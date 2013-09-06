@@ -3838,7 +3838,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="1K-1%" device="" value="1k"/>
 <part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="USB1" library="USB-Mini-Molex" deviceset="USB-MINIB" device="TH-SLOT"/>
+<part name="USB1" library="USB-Mini-Molex" deviceset="USB-MINIB" device="TH-SLOT" value="USB-MINI-AB-TH-MOLEX-SLOT"/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="LED2" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="LED3" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="YELLOW"/>
@@ -3852,8 +3852,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="ESD1" library="NXP_By_element14_Batch_1" deviceset="IP4220CZ6" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SIP"/>
 <part name="FUSE1" library="SparkFun-PowerIC" deviceset="PTC" device="0603" value="1206L050YR Littelfuse"/>
-<part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603"/>
-<part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP"/>
+<part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="600R/500ma"/>
+<part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -3911,7 +3911,10 @@ adam@adamfeuer.com</text>
 <attribute name="NAME" x="33.274" y="36.322" size="1.778" layer="95"/>
 <attribute name="VALUE" x="14.732" y="28.194" size="1.778" layer="96"/>
 </instance>
-<instance part="L1" gate="G$1" x="58.674" y="33.274" rot="R90"/>
+<instance part="L1" gate="G$1" x="58.674" y="33.274" smashed="yes" rot="R90">
+<attribute name="NAME" x="60.198" y="37.338" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="67.31" y="32.258" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="C1" gate="G$1" x="48.26" y="22.86"/>
 <instance part="GND13" gate="1" x="48.26" y="17.78"/>
 </instances>
@@ -4346,6 +4349,15 @@ adam@adamfeuer.com</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,200.66,101.6,IC1,ADBUS5,,,,"/>
+<approved hash="202,1,200.66,99.06,IC1,ADBUS6,,,,"/>
+<approved hash="202,1,200.66,96.52,IC1,ADBUS7,,,,"/>
+<approved hash="104,1,25.4,147.32,USB1,VBUS,VUSB,,,"/>
+<approved hash="104,1,86.36,137.16,ESD1,VP,VUSB,,,"/>
+<approved hash="108,1,200.66,114.3,TXO,,,,,"/>
+<approved hash="113,1,231.817,147.515,JP1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
