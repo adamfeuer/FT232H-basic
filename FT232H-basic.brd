@@ -3228,7 +3228,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="44.8564" y="21.1836" size="0.6096" layer="25" font="vector" ratio="10"/>
 <attribute name="VALUE" x="39.878" y="21.4884" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="FUSE1" library="SparkFun-PowerIC" package="0603" value="1206L050YR Littelfuse" x="18.3388" y="17.4752" smashed="yes">
+<element name="FUSE1" library="SparkFun-PowerIC" package="0603" value="0603L050YR Littelfuse" x="18.3388" y="17.4752" smashed="yes">
 <attribute name="NAME" x="17.1958" y="16.2052" size="0.6096" layer="25" font="vector" ratio="10"/>
 <attribute name="VALUE" x="17.3228" y="16.3322" size="0.4064" layer="27" font="vector"/>
 </element>

@@ -3851,7 +3851,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="ESD1" library="NXP_By_element14_Batch_1" deviceset="IP4220CZ6" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SIP"/>
-<part name="FUSE1" library="SparkFun-PowerIC" deviceset="PTC" device="0603" value="1206L050YR Littelfuse"/>
+<part name="FUSE1" library="SparkFun-PowerIC" deviceset="PTC" device="0603" value="0603L050YR Littelfuse"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="0603" value="600R/500ma"/>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
