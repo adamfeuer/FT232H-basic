@@ -21,9 +21,9 @@
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -3300,7 +3300,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="ESD1" pad="2"/>
 <contactref element="JP1" pad="6"/>
 <contactref element="C1" pad="2"/>
-<wire x1="9.2574" y1="22.6822" x2="10.7188" y2="22.6822" width="0.254" layer="1"/>
+<wire x1="9.2574" y1="22.6822" x2="10.7188" y2="22.6822" width="0.4064" layer="1"/>
 <via x="10.7188" y="22.6822" extent="1-16" drill="0.6"/>
 <wire x1="9.4606" y1="8.802" x2="9.4488" y2="8.763" width="0.254" layer="1"/>
 <via x="9.4488" y="8.763" extent="1-16" drill="0.6"/>
@@ -3481,7 +3481,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="13.8938" y1="8.0772" x2="16.8529" y2="8.0772" width="0.254" layer="1"/>
 <wire x1="16.8529" y1="8.0772" x2="17.1704" y2="8.3947" width="0.254" layer="1"/>
 <wire x1="17.1704" y1="8.3947" x2="17.1704" y2="13.6438" width="0.254" layer="1"/>
-<polygon width="0.2032" layer="1" isolate="0.3048">
+<polygon width="0" layer="1" isolate="0.3048">
 <vertex x="16.4084" y="13.6398"/>
 <vertex x="17.1958" y="12.8016"/>
 <vertex x="17.9832" y="13.6652"/>
