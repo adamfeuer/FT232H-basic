@@ -6,7 +6,12 @@ on the USART interface.
 
 It has USB 2.0 High Speed ESD protection and a resettable fuse on the power input.
 
-NOTE: This board is untested - I haven't made or tested it yet. When I do so I'll update this file.
+This board has been made, tested, and works for send and receive at USB 2.0 HS speeds. 
+
+Known issues
+============
+
+On the board I made, the TX and RX LEDS don't work. I am not sure why - it may be because I installed them wrong.
 
 If you have questions, comments, or improvements, I would love to know them!
 
