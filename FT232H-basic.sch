@@ -470,6 +470,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="2.54" y="24.13" size="1.9304" layer="94">http://creativecommons.org/licenses/by-sa/3.0</text>
 <text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
 </symbol>
+<symbol name="3.3V">
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -494,6 +500,19 @@ Standard 8.5x11 US Letter frame</description>
 </gates>
 <devices>
 <device name="" package="CREATIVE_COMMONS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3.3V" prefix="SUPPLY">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -3842,10 +3861,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="LED2" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="LED3" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="YELLOW"/>
-<part name="R4" library="SparkFun-Resistors" deviceset="1K-1%" device="" value="1k"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="1K-1%" device="" value="1k"/>
-<part name="GND16" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND17" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="R4" library="SparkFun-Resistors" deviceset="1K-1%" device="" value="470"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="1K-1%" device="" value="470"/>
 <part name="LED1" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="OSC1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="5X3" value="12Mhz"/>
 <part name="ESD1" library="NXP_By_element14_Batch_1" deviceset="IP4220CZ6" device=""/>
@@ -3855,6 +3872,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
+<part name="POWER" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="POWER1" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="POWER2" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3896,8 +3916,6 @@ adam@adamfeuer.com</text>
 <instance part="LED3" gate="G$1" x="220.98" y="71.12"/>
 <instance part="R4" gate="G$1" x="220.98" y="58.42" rot="R90"/>
 <instance part="R5" gate="G$1" x="236.22" y="58.42" rot="R90"/>
-<instance part="GND16" gate="1" x="220.98" y="50.8"/>
-<instance part="GND17" gate="1" x="236.22" y="50.8"/>
 <instance part="LED1" gate="G$1" x="180.34" y="162.56" rot="R90"/>
 <instance part="OSC1" gate="G$1" x="99.06" y="66.04"/>
 <instance part="ESD1" gate="A" x="68.58" y="137.16" smashed="yes" rot="R180">
@@ -3917,6 +3935,9 @@ adam@adamfeuer.com</text>
 <instance part="GND13" gate="1" x="48.26" y="17.78"/>
 <instance part="FRAME1" gate="G$1" x="-0.254" y="-0.508"/>
 <instance part="FRAME1" gate="G$2" x="147.066" y="-0.508"/>
+<instance part="POWER" gate="G$1" x="63.5" y="90.424" rot="R180"/>
+<instance part="POWER1" gate="G$1" x="220.98" y="51.054" rot="R180"/>
+<instance part="POWER2" gate="G$1" x="236.22" y="50.8" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -4055,14 +4076,6 @@ adam@adamfeuer.com</text>
 <wire x1="228.6" y1="152.4" x2="215.9" y2="152.4" width="0.1524" layer="91"/>
 <label x="215.9" y="152.4" size="1.6764" layer="95"/>
 <pinref part="JP1" gate="G$1" pin="6"/>
-</segment>
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -4227,13 +4240,25 @@ adam@adamfeuer.com</text>
 <junction x="137.16" y="168.91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <junction x="149.86" y="168.91"/>
-<wire x1="119.38" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
-<label x="104.14" y="111.76" size="1.778" layer="95"/>
 <junction x="119.38" y="172.72"/>
 <junction x="119.38" y="152.4"/>
 <junction x="162.56" y="162.56"/>
 <pinref part="IC1" gate="G$1" pin="VPHY"/>
 <wire x1="157.48" y1="121.92" x2="157.48" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="111.76" x2="63.5" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="111.76" x2="63.5" y2="90.424" width="0.1524" layer="91"/>
+<pinref part="POWER" gate="G$1" pin="3.3V"/>
+<label x="66.548" y="83.82" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="220.98" y1="53.34" x2="220.98" y2="51.054" width="0.1524" layer="91"/>
+<pinref part="POWER1" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="53.34" x2="236.22" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="POWER2" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="TXO" class="0">
