@@ -11,7 +11,8 @@ This board has been made, tested, and works for send and receive at USB 2.0 HS s
 Known issues
 ============
 
-On the board I made, the TX and RX LEDS don't work. I am not sure why - it may be because I installed them wrong.
+TX and RX LEDs did not work on the 0.4.2 version of the board - because the signals are active low,
+and needed to be connected to 3.3V via a 470 ohm resistor. This has been fixed.
 
 If you have questions, comments, or improvements, I would love to know them!
 
