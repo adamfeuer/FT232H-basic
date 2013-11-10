@@ -3912,8 +3912,8 @@ adam@adamfeuer.com</text>
 <instance part="GND12" gate="1" x="190.5" y="160.02"/>
 <instance part="USB1" gate="G$1" x="15.24" y="142.24"/>
 <instance part="GND14" gate="1" x="27.94" y="121.158"/>
-<instance part="LED2" gate="G$1" x="236.22" y="71.12"/>
-<instance part="LED3" gate="G$1" x="220.98" y="71.12"/>
+<instance part="LED2" gate="G$1" x="236.22" y="68.072" rot="R180"/>
+<instance part="LED3" gate="G$1" x="220.98" y="68.072" rot="R180"/>
 <instance part="R4" gate="G$1" x="220.98" y="58.42" rot="R90"/>
 <instance part="R5" gate="G$1" x="236.22" y="58.42" rot="R90"/>
 <instance part="LED1" gate="G$1" x="180.34" y="162.56" rot="R90"/>
@@ -4302,32 +4302,18 @@ adam@adamfeuer.com</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="ACBUS3"/>
 <label x="203.2" y="81.28" size="1.6764" layer="95"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="200.66" y1="81.28" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="81.28" x2="236.22" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="73.152" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXLED" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="ACBUS4"/>
 <label x="203.2" y="78.74" size="1.6764" layer="95"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
 <wire x1="200.66" y1="78.74" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="78.74" x2="220.98" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
 <pinref part="LED3" gate="G$1" pin="C"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="220.98" y1="66.04" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="66.04" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="73.152" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VREGIN" class="0">
@@ -4371,10 +4357,27 @@ adam@adamfeuer.com</text>
 <junction x="48.26" y="33.274"/>
 </segment>
 </net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="236.22" y1="63.5" x2="236.22" y2="65.532" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="65.532" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1,63.5,90.424,3.3V,POWER,,,,"/>
+<approved hash="102,1,220.98,51.054,3.3V,POWER,,,,"/>
+<approved hash="102,1,236.22,50.8,3.3V,POWER,,,,"/>
 <approved hash="202,1,200.66,101.6,IC1,ADBUS5,,,,"/>
 <approved hash="202,1,200.66,99.06,IC1,ADBUS6,,,,"/>
 <approved hash="202,1,200.66,96.52,IC1,ADBUS7,,,,"/>
