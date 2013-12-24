@@ -3881,7 +3881,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <plain>
 <text x="171.958" y="7.112" size="2.54" layer="91">Adam Feuer
 adam@adamfeuer.com</text>
-<text x="239.014" y="7.112" size="2.54" layer="91">0.1</text>
+<text x="239.014" y="7.112" size="2.54" layer="91">0.4.4</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="167.64" y="86.36"/>
@@ -3912,10 +3912,10 @@ adam@adamfeuer.com</text>
 <instance part="GND12" gate="1" x="190.5" y="160.02"/>
 <instance part="USB1" gate="G$1" x="15.24" y="142.24"/>
 <instance part="GND14" gate="1" x="27.94" y="121.158"/>
-<instance part="LED2" gate="G$1" x="236.22" y="68.072" rot="R180"/>
-<instance part="LED3" gate="G$1" x="220.98" y="68.072" rot="R180"/>
-<instance part="R4" gate="G$1" x="220.98" y="58.42" rot="R90"/>
-<instance part="R5" gate="G$1" x="236.22" y="58.42" rot="R90"/>
+<instance part="LED2" gate="G$1" x="236.22" y="57.912" rot="R180"/>
+<instance part="LED3" gate="G$1" x="220.98" y="57.912" rot="R180"/>
+<instance part="R4" gate="G$1" x="220.98" y="71.12" rot="R90"/>
+<instance part="R5" gate="G$1" x="236.22" y="71.12" rot="R90"/>
 <instance part="LED1" gate="G$1" x="180.34" y="162.56" rot="R90"/>
 <instance part="OSC1" gate="G$1" x="99.06" y="66.04"/>
 <instance part="ESD1" gate="A" x="68.58" y="137.16" smashed="yes" rot="R180">
@@ -4251,14 +4251,14 @@ adam@adamfeuer.com</text>
 <label x="66.548" y="83.82" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="220.98" y1="53.34" x2="220.98" y2="51.054" width="0.1524" layer="91"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
 <pinref part="POWER1" gate="G$1" pin="3.3V"/>
+<wire x1="220.98" y1="55.372" x2="220.98" y2="51.054" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="53.34" x2="236.22" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="POWER2" gate="G$1" pin="3.3V"/>
+<wire x1="236.22" y1="55.372" x2="236.22" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXO" class="0">
@@ -4303,8 +4303,8 @@ adam@adamfeuer.com</text>
 <pinref part="IC1" gate="G$1" pin="ACBUS3"/>
 <label x="203.2" y="81.28" size="1.6764" layer="95"/>
 <wire x1="200.66" y1="81.28" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<wire x1="236.22" y1="73.152" x2="236.22" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="81.28" x2="236.22" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXLED" class="0">
@@ -4312,8 +4312,8 @@ adam@adamfeuer.com</text>
 <pinref part="IC1" gate="G$1" pin="ACBUS4"/>
 <label x="203.2" y="78.74" size="1.6764" layer="95"/>
 <wire x1="200.66" y1="78.74" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="LED3" gate="G$1" pin="C"/>
-<wire x1="220.98" y1="73.152" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="78.74" x2="220.98" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VREGIN" class="0">
@@ -4357,18 +4357,18 @@ adam@adamfeuer.com</text>
 <junction x="48.26" y="33.274"/>
 </segment>
 </net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="236.22" y1="63.5" x2="236.22" y2="65.532" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="LED3" gate="G$1" pin="A"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="220.98" y1="65.532" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
+<wire x1="220.98" y1="66.04" x2="220.98" y2="62.992" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="66.04" x2="236.22" y2="62.992" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -4376,8 +4376,7 @@ adam@adamfeuer.com</text>
 </sheets>
 <errors>
 <approved hash="102,1,63.5,90.424,3.3V,POWER,,,,"/>
-<approved hash="102,1,220.98,51.054,3.3V,POWER,,,,"/>
-<approved hash="102,1,236.22,50.8,3.3V,POWER,,,,"/>
+<approved hash="201,1,63.5,90.424,3.3V,POWER\, 3.3V,,,,"/>
 <approved hash="202,1,200.66,101.6,IC1,ADBUS5,,,,"/>
 <approved hash="202,1,200.66,99.06,IC1,ADBUS6,,,,"/>
 <approved hash="202,1,200.66,96.52,IC1,ADBUS7,,,,"/>
